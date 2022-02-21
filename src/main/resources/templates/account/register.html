@@ -6,7 +6,7 @@
 </head>
     
     <style>
-    input[type=text], [type=email], input[type=password]  {
+    input[type=text], input[type=email], input[type=password]  {
      background-color: #56baed;
      border: none;
      color: white;
@@ -38,7 +38,7 @@
      background: rgba(darken(#2196F3,40%), 0.85);
    } 
    
-   input[type=text]:hover, input[type=submit]:hover, input[type=password], [type=email]:hover  {
+   input[type=text]:hover, input[type=submit]:hover, input[type=password]:hover, [type=email]:hover  {
      background-color: #39ace7;
    }
    
@@ -71,12 +71,12 @@
      border-radius: 5px 5px 5px 5px;
    }
    
-   input[type=text] input[type=password], input[type=email]:focus {
+   input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
      background-color: #fff;
      border-bottom: 2px solid #5fbae9;
    }
    
-   input[type=text],input[type=password],input[type=email] :placeholder {
+   input[type=text]:placeholder, input[type=password]:placeholder, input[type=email]:placeholder {
      color: #cccccc;
    }
    
