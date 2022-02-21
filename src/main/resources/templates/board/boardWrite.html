@@ -5,7 +5,7 @@
     <title>게시글 등록화면</title>
 </head>
     <style>
-    input[type=text] {
+    input[type=text], textarea[id=content] {
      background-color: beige;
      border: none;
      color: white;
@@ -37,7 +37,7 @@
      background: rgba(darken(#2196F3,40%), 0.85);
    } 
    
-   input[type=text]:hover {
+   input[type=text]:hover, textarea[id=content]:hover {
      background-color: beige;
    }
    
@@ -49,7 +49,7 @@
      transform: scale(0.95);
    }
    
-   input[type=text], input[type=content] {
+   input[type=text], textarea[id=content] {
      background-color: #f6f6f6;
      border: none;
      color: #0d0d0d;
@@ -70,12 +70,12 @@
      border-radius: 5px 5px 5px 5px;
    }
    
-   input[type=text]:focus, input[type=content]:focus {
+   input[type=text]:focus, textarea[id=content]:focus {
      background-color: #fff;
      border-bottom: 2px solid #5fbae9;
    }
    
-   input[type=text]:placeholder , input[type=content]:placeholder {
+   input[type=text]:placeholder , textarea[id=content]:placeholder {
      color: #cccccc;
    }
    
