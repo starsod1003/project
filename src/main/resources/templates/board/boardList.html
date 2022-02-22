@@ -31,7 +31,6 @@
      flex-direction: column; 
      justify-content: center;
      width: 100%;
-     min-height: 100%;
      padding: 20px;
      background: rgba(darken(#2196F3,40%), 0.85);
    } 
@@ -150,7 +149,7 @@
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
-  left: 50%;
+  width:fit-content;
 }
 .button-8:hover,
 .button-8:focus {
@@ -173,6 +172,7 @@
   white-space: nowrap;
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 6px;
 }
 
 .rtable,
@@ -268,13 +268,13 @@
     </table>
 </div>
 
-    <div>
+    <div class="container">
         <a href="#" th:href="@{/board/boardWrite}" class="button-8">글등록</a> <!-- 글을 쓸 수 있는 화면 요청 -->
     </div>
 
     <!-- Pagination -->
 <p th:text="${navi}"></p>
-    <nav>
+    <nav class="container">
         <p>
             <!-- 이전 그룹 -->
             <span th:if="${navi.startPageGroup} <= 1"> &laquo;</span>
@@ -310,7 +310,7 @@
             </span>
             <span  th:unless="${ navi.totalPageCount > navi.endPageGroup}">&raquo;</span>
          </p>
-    </nav>
+    </nav class="container">
 </div>
 </body>
 </html>
