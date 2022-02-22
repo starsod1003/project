@@ -37,16 +37,8 @@
      background: rgba(darken(#2196F3,40%), 0.85);
    } 
    
-   input[type=text]:hover, textarea[id=content]:hover {
+   input[type=text]:hover, textarea[id=content] {
      background-color: beige;
-   }
-   
-   input[type=submit]:active  {
-     -moz-transform: scale(0.95);
-     -webkit-transform: scale(0.95);
-     -o-transform: scale(0.95);
-     -ms-transform: scale(0.95);
-     transform: scale(0.95);
    }
    
    input[type=text], textarea[id=content] {
@@ -120,33 +112,68 @@
          height: 50%;
      }
    
-     input[type=submit] {
-       width: 60%;
-       height: 30%;
-       padding: 10px 10px;
-       background: #5fbae9;
-       color: #fff;
-       display: block;
-       border: none;
-       margin-top: 10px;
-       position: absolute;
-       left: 0;
-       bottom: 0;
-       max-height: 30px;
-       border: 0px solid rgba(0,0,0,0.1);
-     border-radius: 0 0 2px 2px;
-       transform: rotateZ(0deg);
-       
-       transition: all 0.1s ease-out;
-         border-bottom-width: 3px;
-        }
-        
-        h2 {
-       background-color: white;
-       font-size: 25px;
-       font: bolder;
-     }
-   
+  .button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: absolute;
+  width: 40%;
+  left: 40%;
+  margin: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
    </style>
     
 <body>
@@ -161,7 +188,7 @@
         <label for="content">글내용</label>
         <textarea id="content" rows="5" cols="60" name="content" th:text="${board.content}" required></textarea>
         <br>
-        <input type="submit" value="글수정" >
+        <input class="button-19" type="submit" value="글수정" >
     </form>
 
 </div>
